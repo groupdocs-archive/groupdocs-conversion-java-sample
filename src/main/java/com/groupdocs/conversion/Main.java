@@ -27,9 +27,12 @@ public class Main {
         //Common.INPUT_GUID_FILE = "PDFsample.pdf";
 
         // Uncomment following lines and specify the licence file to embed product licence using file path.
-        Common.LICENSE_PATH = Paths.get(Common.PROJECT_PATH, "GroupDocs.Conversion.Java.lic").toString();
-        Common.applyLicense(Common.LICENSE_PATH);
-
+        
+        try {
+            Common.LICENSE_PATH = Paths.get(Common.PROJECT_PATH, "GroupDocs.Conversion.Java.lic").toString();
+            Common.applyLicense(Common.LICENSE_PATH);
+        } catch(Exception e) {}
+        
         // Uncomment following lines and specify the licence file to embed product licence using stream.
         //Stream licenseStream = File.Open(Path.Combine(Environment.CurrentDirectory, @"GroupDocs.total.lic"), FileMode.Open, FileAccess.Read);
         //Common.ApplyLicense(licenseStream);
